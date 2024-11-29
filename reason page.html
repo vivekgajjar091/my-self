@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Creative Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            scroll-behavior: smooth;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        nav {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            z-index: 999;
+            top: 0;
+            transition: background 0.5s ease;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 40px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            position: relative;
+            transition: 0.3s;
+        }
+        nav ul li a:hover {
+            color: #f0a500;
+        }
+        nav ul li a::before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 50%;
+            background-color: #f0a500;
+            transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+        }
+        nav ul li a:hover::before {
+            width: 100%;
+            left: 0;
+        }
+        header {
+            height: 100vh;
+            background: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            position: relative;
+            animation: fadeIn 1s ease-in-out;
+        }
+        header h1 {
+            font-size: 4rem;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+        }
+        section {
+            padding: 80px 20px;
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards;
+            animation-delay: 0.5s;
+        }
+        section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        section h2::after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background-color: #f0a500;
+            display: block; 
+            margin: 10px auto;
+        }
+        .reasons {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .reason-box {
+            background: #fff;
+            width: 30%;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .reason-box:hover {
+            transform: scale(1.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        .reason-box h3 {
+            color: #f0a500;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+       
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .reason-box {
+                width: 100%;
+            }
+            header h1 {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="home page.html">Home</a></li> 
+                <li><a href="about page.html">About Me</a></li>
+                <li><a href="mission.html">Mission</a></li>
+                <li><a href="reason page.html">Vision</a></li>
+                <li><a href="contect.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    <header id="home">
+        <h1>Welcome to My Creative webpageb</h1>
+    </header>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a passionate web Designer and Web Developer who loves turning ideas into reality through creative designs and applications.</p>
+    </section>
+    <section id="reasons">
+        <h2>Why I Love Being a Designer</h2>
+        <div class="reasons">
+            <div class="reason-box">
+                <h3>Web Designers Can Apply Some Amazing New Web Effects </h3>
+                <p> Effects like parallax scrolling or the use of HTML5 for more interesting animations are becoming in wider use and easier to implement with some imagination. At the same time, true creative web design comes in economy and not going overboard with special effects. </p>
+            </div>
+            <div class="reason-box">
+                <h3>Web Design Also Helps Fully Communicate Content</h3>
+                <p>Here at EnvisionIT Solutions, you'll find a creative and devoted web design team you'll love having in your corner. We can do it all for you in the realms of web design, plus add IT support on the side to keep your website running optimally. We are a web design company in Albuquerque. </p>
+            </div>
+            <div class="reason-box">
+                <h3>Business Representation
+                </h3>
+                <p>One reason why your need web designers is because your website is crucial in introducing you, your business, and your company to your target audience. It can communicate your business to other stakeholders as well. </p>
+            </div>
+            
+            <div class="reason-box">
+                <h3>Expert Partners
+                </h3>
+                <p>For any creative, it is easy to say you work for a brand or a person. When it comes to working with a brand or person, that is the exception. For a web designer, the same case applies. A web designer can be your partner in every project stage so that at the end project your website meets and exceeds your expectations. 
+
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: vpanchasara777@rku.ac.in</p>
+        <p>Phone: 7984193442</p>
+    </section>
+    <footer>
+        <p>thank you</p>
+    </footer>
+</body>
+</html>
